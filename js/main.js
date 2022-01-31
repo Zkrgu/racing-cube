@@ -19,6 +19,9 @@ class Square {
 		this._x += dx;
 		this._y += dy;
 	}
+
+	get x() { return this._x}
+	get y() { return this._x}
 }
 
 const square = new Square(50,50,50,50);
@@ -42,5 +45,5 @@ document.addEventListener('keydown', e=>{
 	}
 	ctx.clearRect(0,0,500,500);
 	square.draw(ctx);
-	if(square._x > 300) statusEl.innerHTML = 'Du vant';
+	if(square.x > 300) statusEl.innerHTML = 'Du vant';
 })
